@@ -26,6 +26,16 @@ export default function Reply({ userImagePath, username, replyText, likeNum } : 
             </div>
           </div>
         </div>
-    {/* You can add more reply components here */}
+    { 
+      replyText && (
+        <div className="p-4 border-top">
+          <p>{replyText}</p>
+          <div className="d-flex gap-2">
+            <img src="/like.svg" width={20}></img>
+            <span>{likeNum} คนชอบ</span>
+          </div>
+        </div>
+      )
+    }
   </div>;
 }
